@@ -77,11 +77,11 @@ class Training:
 
     def train_logger(self,
                     verbose : bool):
-        '''
-        train_logger prints training metrics after each epoch
-
-        verbose : (bool, optional) -> verbose = True prints training metrics at the end of each epoch.
-        '''
+        """ train_logger prints training metrics after each epoch
+        
+            Args:
+            verbose (bool, optional): verbose = True prints training metrics at the end of each epoch.
+        """
 
         if verbose:
               train_metrics = self.train_metrics
