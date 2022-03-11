@@ -160,7 +160,8 @@ class Training:
         Returns:
             transformed_prediction (Tensor[Tensor]) predicted classes of transformed data
         """        
-
+        
+        # Mean noise reshaped into a matrix with n_classes rows
         n_classes =  len(mean_noise)
         avg_vec = np.stack(mean_noise).reshape(n_classes, -1)
 
