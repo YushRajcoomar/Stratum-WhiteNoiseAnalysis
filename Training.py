@@ -77,11 +77,11 @@ class Training:
 
     def train_logger(self,
                     verbose : bool):
-        '''
-        train_logger prints training metrics after each epoch
-
-        verbose : (bool, optional) -> verbose = True prints training metrics at the end of each epoch.
-        '''
+        """ train_logger prints training metrics after each epoch
+        
+            Args:
+            verbose (bool, optional): verbose = True prints training metrics at the end of each epoch.
+        """
 
         if verbose:
               train_metrics = self.train_metrics
@@ -160,7 +160,8 @@ class Training:
         Returns:
             transformed_prediction (Tensor[Tensor]) predicted classes of transformed data
         """        
-
+        
+        # Mean noise reshaped into a matrix with n_classes rows
         n_classes =  len(mean_noise)
         avg_vec = np.stack(mean_noise).reshape(n_classes, -1)
 
